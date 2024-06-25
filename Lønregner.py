@@ -28,7 +28,7 @@ def Main(window):
                 run = False
                 sys.exit()
             elif(event.type == pg.MOUSEBUTTONUP):
-                click()
+                click(window,font)
 
         HøjLøn,LavLøn = Udregner(LønHøj,LønLav)
         redraw(window,font,HøjLøn,LavLøn)

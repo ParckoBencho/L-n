@@ -1,7 +1,7 @@
 import pygame as pg
 import Data
 from Data import felter 
-def click():
+def click(window,font):
     pos = pg.mouse.get_pos()
     
     if(710 <= pos[0] <= 790 and Data.Page != 0):
@@ -11,6 +11,31 @@ def click():
     elif(810 <= pos[0] <= 890 and Data.Page != 4):
         if(450 <= pos[1] <= 490):
             Data.Page += 1
+    
+    if(500 <= pos[0] <= 600 and 450 <= pos[1] <= 500):
+        input_string = ""
+        while True:
+            for event in pg.event.get():
+                if event.type == pg.KEYDOWN:
+                    if event.key == pg.K_RETURN:
+                        try:
+                            Data.skat = int(input_string)
+                        except ValueError:
+                            pass
+                        input_string = ""
+                        return
+                    elif event.key == pg.K_BACKSPACE:
+                        input_string = input_string[:-1]
+                    else:
+                        input_string += event.unicode
+                        pg.draw.rect(window,"black",pg.Rect(500,450,100,50))
+                        pg.draw.rect(window,"White",pg.Rect(500,450,100,50),2)
+                        text = font.render(input_string + " %", True, (255,255,255))
+                        textRect = text.get_rect()
+                        textRect.center = (550,475)
+                        window.blit(text, textRect)
+                        pg.display.flip()
+
     
     else:
         for I in range(len(felter)):

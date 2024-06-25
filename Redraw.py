@@ -61,6 +61,17 @@ def redraw(window,font,HøjLøn,LavLøn):
     textRect.center = (650,475)
     window.blit(text, textRect)
 
+    pg.draw.rect(window,"White",pg.Rect(500,450,100,50),2)
+    text = font.render(str(Data.skat) + " %", True, (255,255,255))
+    textRect = text.get_rect()
+    textRect.center = (550,475)
+    window.blit(text, textRect)
+
+    text = font.render("Skat", True, (255,255,255))
+    textRect = text.get_rect()
+    textRect.center = (550,440)
+    window.blit(text, textRect)
+
 
     pg.draw.rect(window,"white",pg.Rect(720,50,160,80))
     pg.draw.rect(window,"black",pg.Rect(720,50,160,80),2)
@@ -88,13 +99,36 @@ def redraw(window,font,HøjLøn,LavLøn):
 
     pg.draw.rect(window,"white",pg.Rect(720,310,160,80))
     pg.draw.rect(window,"black",pg.Rect(720,310,160,80),2)
-    text = font.render(str(floor(HøjLøn*0.65)) + " DKK / " + str(floor(LavLøn*0.65)) + " DKK", True, (0,0,0))
+    pg.draw.line(window,"black",(799,310),(799,390),2)
+
+    text = font.render(str(floor((HøjLøn*0.92)*(1-(Data.skat/100)))) + " DKK", True, (0,0,0))
     textRect = text.get_rect()
-    textRect.center = (800,350)
+    textRect.center = (760,330)
     window.blit(text, textRect)
-    text = font.render("35% Skat", True, (0,0,0))
+
+    text = font.render(str(floor((LavLøn*0.92)*(1-(Data.skat/100)))) + " DKK", True, (0,0,0))
     textRect = text.get_rect()
-    textRect.center = (800,300)
+    textRect.center = (760,370)
+    window.blit(text, textRect)
+
+    text = font.render(str(floor(HøjLøn*0.92)) + " DKK", True, (0,0,0))
+    textRect = text.get_rect()
+    textRect.center = (840,330)
+    window.blit(text, textRect)
+
+    text = font.render(str(floor(LavLøn*0.92)) + " DKK", True, (0,0,0))
+    textRect = text.get_rect()
+    textRect.center = (840,370)
+    window.blit(text, textRect)
+
+    text = font.render("Skat + AMB", True, (0,0,0))
+    textRect = text.get_rect()
+    textRect.center = (760,300)
+    window.blit(text, textRect)
+
+    text = font.render("AMB", True, (0,0,0))
+    textRect = text.get_rect()
+    textRect.center = (840,300)
     window.blit(text, textRect)
 
 

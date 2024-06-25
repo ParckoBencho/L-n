@@ -5,6 +5,7 @@ startdag = [3,6,1,4,7]
 Page = 0
 felter = []
 MånedNavne = ["Maj","Juni","Juli","August","September"]
+skat = 0
 
 
 
