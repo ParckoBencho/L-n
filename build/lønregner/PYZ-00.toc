@@ -1,4 +1,4 @@
-('C:\\Users\\RTX\\Kode\\Python\\løn\\build\\lønregner\\PYZ-00.pyz',
+('C:\\Users\\RTX\\Kode\\Python\\løn\\build\\Lønregner\\PYZ-00.pyz',
  [('Click', 'C:\\Users\\RTX\\Kode\\Python\\løn\\Click.py', 'PYMODULE'),
   ('Data', 'C:\\Users\\RTX\\Kode\\Python\\løn\\Data.py', 'PYMODULE'),
   ('Felter', 'C:\\Users\\RTX\\Kode\\Python\\løn\\Felter.py', 'PYMODULE'),

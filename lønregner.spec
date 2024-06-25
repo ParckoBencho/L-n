@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['lønregner.py'],
+    ['Lønregner.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -21,7 +21,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='lønregner',
+    name='Lønregner',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
