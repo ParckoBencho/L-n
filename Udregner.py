@@ -35,7 +35,7 @@ def Udregner(LønHøj,LønLav):
                         if(felter[I].dag[II] == 6):
                             LønHøj += (timeløn*8)+(LørdagMorgen*3.5)
                             LønLav += (timeløn*8)+(LørdagMorgen*3.5)
-                        if(felter[I].dag[II] == 7):
+                        elif(felter[I].dag[II] == 7):
                             LønHøj += (timeløn*8)+(Søndag*8)
                             LønLav += (timeløn*8)+(Søndag*8)
                         else:
@@ -46,7 +46,7 @@ def Udregner(LønHøj,LønLav):
                         if(felter[I].dag[II] == 6):
                             LønHøj += (timeløn*7)+(LørdagMorgen*2.5)+(Søndag*4.5)
                             LønLav += (timeløn*6)+(LørdagMorgen*2.5)+(Søndag*3.5)
-                        if(felter[I].dag[II] == 7):
+                        elif(felter[I].dag[II] == 7):
                             LønHøj += (timeløn*7.5)+(Søndag*7.5)
                             LønLav += (timeløn*6.5)+(Søndag*6.5)
                         else:
